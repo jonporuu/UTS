@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding The Self – Home</title>
+  <link rel="stylesheet" href="Properties/UTS.css" />
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="header-left">
+      <a href="About_Us.html"><img src="CvSU - Imus.png" alt="Logo" class="logo-img" /></a>
+    </div>
+    
+    <h1 class="header-title">Understanding The Self</h1>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-list">
+
+        <li class="dropdown">
+          <a href="#">Topic</a>
+          <ul class="dropdown-content">
+            <li><a href="Digital_Self.html">Digital Self</a></li>
+            <li><a href="Economic_Self.html">Economic Self</a></li>
+            <li><a href="Goal_Setting_To_Achieve_Success.html">Goal Setting to Achieve Success</a></li>
+            <li><a href="Physical_And_Mental_Health.html">Physical and Mental Health</a></li>
+            <li><a href="Spritual_Self.html">Spiritual Self</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <div class="topic">
+      <h2>Welcome to Understanding The Self</h2>
+      <p>This site explores how individuals understand and shape their identity, behavior, values, and relationships. Each topic offers insights and strategies for personal development.</p>
+    </div>
+
+    <section class="topic">
+      <h2>Digital Self</h2>
+      <p><strong>Overview :</strong> The advent of the digital age has profoundly reshaped how individuals perceive and present themselves. Modern adolescents, in particular, are immersed in a technological revolution, characterized by pervasive computer use, internet accessibility, and advanced mobile phones.</p>
+      <p><strong>Challenges :</strong> Impact on Well-being: Studies have shown that high-intensity Facebook use can negatively impact well-being, highlighting the potential for digital platforms to have adverse effects.</p>
+      <p><strong>Tips :</strong> Mindful Posting: Never post or send anything you would be embarrassed for others to see. Be cautious about over-sharing personal information.</p>
+    </section>
+
+    <section class="topic">
+      <h2>Economic Self</h2>
+      <p><strong>What it is :</strong> Economics is defined as the study of things that a person is lacking, how they make use of the things they have and even making the right decision. This is also regards to the material prosperity of an individual. In material aspects, it refers to how an individual’s possession, status and economic decision shape themselves in both self-concept and identity. </p>
+      <p><strong>Importance :</strong> When someone is in charge of their own money, they naturally develop habits like budgeting, saving, and investing. These habits build long-term wealth and help avoid debt traps.</p>
+      <p><strong>Tips :</strong> Practice Self-Awareness with Money, Avoid Comparing Yourself to Others, Educate Yourself About Basic Finance</p>
+    </section>
+
+    <section class="topic">
+      <h2>Goal Setting to Achieve Success</h2>
+      <p><strong>What it is:</strong> Setting goals is the first step toward turning your vision into reality. A well-defined goal provides direction, keeps you focused, and helps track progress.</p>
+      <p><strong>Importance :</strong> Accountability - Defined goals make it easier to measure success and stay on track.</p>
+      <p><strong>Tips:</strong> Track Progress - Review regularly and adjust if needed. A small business owner uses a spreadsheet to monitor monthly sales targets and pivots their strategy based on results.</p>
+    </section>
+
+    <section class="topic">
+      <h2>Physical and Mental Health</h2>
+      <p><strong>What it is:</strong> Each day people wake-up and face these challenges. This is no easy task but that is how it is to survive and exist in an ever-changing modern world. Unfortunately, as people carry-on with their tasks and routines, they experience stress.</p>
+      <p><strong>Challenges:</strong> Academic pressure, Financial Difficulties, Mental Disorders, Relationships, Time Management</p>
+      <p><strong>Tips:</strong> Slow Down - Life can feel like a constant race, but pushing through without rest can wear you down. Taking even a few moments to pause, breathe, or do something calming helps your mind reset. Slowing down gives you space to think clearly and see that many challenges are more manageable than they seem.</p>
+    </section>
+
+    <section class="topic">
+      <h2>Spiritual Self</h2>
+      <p><strong>What it is:</strong> The Spiritual Self is often described as the deepest part of our identity — the core of who we are beyond our physical body, emotions, and thoughts.</p>
+      <p><strong>Challenges:</strong> Lack of time or busy lifestyle - A hectic schedule filled with work, school, and personal responsibilities can leave little room for moments of quiet reflection, making it difficult to explore one's spiritual needs or growth.</p>
+      <p><strong>Tips:</strong> Understanding and nurturing the spiritual self is essential for living a meaningful and authentic life. It allows us to connect with our inner values, act with integrity, and find purpose beyond material success or social validation. </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BSIT - 2D | GNED 08 - Understanding The Self | All Rights Reserved.</p>
+  </footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  const body = document.body;
+
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = navList.classList.contains('show');
+    navList.classList.toggle('show');
+    navList.classList.remove('hide');
+    if (!isOpen) {
+      body.classList.add('no-scroll');
+    } else {
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    }
+  });
+
+  document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('show');
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    const isClickInsideMenu = navList.contains(event.target);
+    const isBurger = toggle.contains(event.target);
+    const isMenuVisible = navList.classList.contains('show');
+
+    if (!isClickInsideMenu && !isBurger && isMenuVisible) {
+      navList.classList.remove('show');
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    }
+  });
+</script>
+
+</body>
+</html>

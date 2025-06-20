@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding The Self – Physical and Mental Health</title>
+  <link rel="stylesheet" href="Properties/UTS.css" />
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="header-left">
+      <a href="About_Us.html"><img src="CvSU - Imus.png" alt="Logo" class="logo-img" /></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="Home.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Topic</a>
+          <ul class="dropdown-content">
+            <li><a href="Digital_Self.html">Digital Self</a></li>
+            <li><a href="Economic_Self.html">Economic Self</a></li>
+            <li><a href="Goal_Setting_To_Achieve_Success.html">Goal Setting to Achieve Success</a></li>
+            <li><a href="Physical_And_Mental_Health.html">Physical and Mental Health</a></li>
+            <li><a href="Spritual_Self.html">Spiritual Self</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <div class="page-title">
+    <h2>Physical And Mental Health</h2>
+  </div>
+
+  <section class="topic">
+    <h3>What it is?</h3>
+    <p>     Each day people wake-up and face these challenges. This is no easy task but that is how it is to survive and exist in an ever-changing modern world. Unfortunately, as people carry-on with their tasks and routines, they experience stress. Stress is defined as a mental and physical condition that people encounter when they have to adjust or adapt to environmental events. Stress is always accompanied by some kind of physiological reaction that is triggered by the autonomic nervous system (ANS). The stress that is experienced for some time is physically and psychologically harmful. Long-term stresses impact strongly on people's physical and mental health and their well-being. Events, people and even objects that give stress are called stressors.
+      Physical health, which includes things like exercise, illness prevention, and general well-being, is the body's capacity to operate properly and efficiently. A balanced diet, enough sleep, and regular exercise are essential for preserving physical health. Conversely, mental health is associated with our social, psychological, and emotional well-being. It affects our thoughts, emotions, behaviors, and stress management. Feeling good about oneself, managing life's obstacles, and giving back to the community are all components of mental well-being. 
+</p>
+  </section>
+
+  <section class="topic">
+    <h3>Importance</h3>
+    <p>Regular exercise and other physical health-promoting activities can have a major positive impact on mental health by lowering stress, anxiety, and depression. On the other hand, those who are in good mental health are better able to control their stress, build wholesome relationships, and take part in activities that promote their general wellbeing. Thus, putting one's physical and mental well-being first is essential for personal growth and living a satisfying life. Both physical and mental well-being are essential components of total health, and they are intimately related. You may enhance your physical health by concentrating on your mental health, and vice versa. 
+</p>
+  </section>
+
+  <section class="topic">
+    <h3>Challenges</h3>
+    <ul>
+      <li>Academic pressure</li>
+      <li>Financial Difficulties</li>
+      <li>Mental Disorders</li>
+      <li>Relationships</li>
+      <li>Time Management</li>
+    </ul>
+  </section>
+
+  <section class="topic">
+    <h3>Tips & Strategies</h3>
+    <ul>
+      <p>Our mental and physical health are deeply connected. When one starts to suffer, the other often follows. That’s why it’s so important to care for both. Here are some tips/strategies to help manage stress and maintain overall well-being (Coon, 2001, as cited in “Lesson 3: Taking Charge of One’s Health”, n.d., pp. 209-210).
+
+      </p>
+      <li>Slow Down - Life can feel like a constant race, but pushing through without rest can wear you down. Taking even a few moments to pause, breathe, or do something calming helps your mind reset. Slowing down gives you space to think clearly and see that many challenges are more manageable than they seem.</li>
+      <li>Organize and Prioritize - Disorganization contributes significantly to stress. Keeping things in order both physically and mentally can reduce stress and increase productivity. Use tools like to-do lists or planners, and focus on what’s most important. The S.M.A.R.T. approach (Specific, Measurable, Achievable, Realistic, Time-bound) can help set clear and achievable goals.</li>
+      <li>Live a Healthy Life - Achieving a balanced lifestyle requires intentional focus on quality rather than quantity. You don’t have to do everything all at once. Instead, focus on meaningful goals that leave time for rest, family, and self-care. </li>
+      <li>Recognize and Accept Limits - Understanding and respecting personal limitations is an important key to managing stress. Knowing your limits helps prevent burnout and allows you to give your best to the things that truly matter. You don’t have to be great at everything, being the best at what suits you is more than enough.</li>
+      <li>Seek Social Support - Having someone to talk to makes a big difference. Open communication with trusted people, such as family members or close friends, can provide reassurance and perspective.</li>
+      <li>Writing it Down - If talking feels too hard or emotionally draining, writing can be a powerful outlet. Journaling can help organize thoughts, reduce psychological tension, and provide insight into personal challenges. </li>
+      <li>Progress in taking charge of one's health can support both personal and academic growth. When an individual is having a healthy lifestyle and balanced diet can lead us to better concentration, it enhances one’s cognitive functions, energy and emotional stability. Studies have shown that students who engage in physical activity tend to have a higher academic performance because of their improved brain function and reduced symptoms of bad mental health. (Rasberry et al., 2011). </li>
+      <li>In taking charge of one's health, there are also other things that can be improved other than an individual's academic performance, but also practice someone's self discipline.</li>
+    </ul>
+  </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 BSIT - 2D | GNED 08 - Understanding The Self | All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const body = document.body;
+
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = navList.classList.contains('show');
+      navList.classList.toggle('show');
+      navList.classList.remove('hide');
+      body.classList.toggle('no-scroll', !isOpen);
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!navList.contains(event.target) && !toggle.contains(event.target) && navList.classList.contains('show')) {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>

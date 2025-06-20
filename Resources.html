@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding The Self – Resources</title>
+  <link rel="stylesheet" href="Properties/UTS.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+    <div class="header-left">
+      <a href="About_Us.html"><img src="CvSU - Imus.png" alt="Logo" class="logo-img" /></a>
+    </div>
+      <h1>Resources</h1>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="Home.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#">Topic</a>
+          <ul class="dropdown-content">
+            <li><a href="Digital_Self.html">Digital Self</a></li>
+            <li><a href="Economic_Self.html">Economic Self</a></li>
+            <li><a href="Goal_Setting_To_Achieve_Success.html">Goal Setting to Achieve Success</a></li>
+            <li><a href="Physical_And_Mental_Health.html">Physical and Mental Health</a></li>
+            <li><a href="Spritual_Self.html">Spiritual Self</a></li>
+          </ul>
+        </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="topic">
+      <h2>Digital Self</h2>
+      <ul>
+        <li><a href="https://drive.google.com/drive/folders/1ddtavE_g_FCcGabmxOW83KDbxq8Db5pO?fbclid=IwY2xjawLCQ-5leHRuA2FlbQIxMABicmlkETE0RzdZRm56RUhkM3k0MHFLAR5XEwNoqrOeTHM09Bb74i-znmN3kSvcaGEZuBTOtO8PYoF4X4rFU8nT5hphww_aem_6UiQ_uZu7krk5yyJxe51EQ" target="_blank">Lesson 6 : The Digital Self</a></li>
+      </ul>
+
+      <h2>Economic Self</h2>
+      <ul>
+        <li><a href="https://psycnet.apa.org/record/2002-12709-001" target="_blank">Will Money Increase Subjective Well-Being?</a></li>
+        <li><a href="https://www.nber.org/papers/w18952" target="_blank">The Economic Importance of Financial Literacy: Theory and Evidence</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/20938727/" target="_blank">Financial Socialization of First-Year College Students</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167487099000306" target="_blank">The Saving and Spending Habits of Young People</a></li>
+        <li><a href="https://www.oecd.org/en/publications/oecd-infe-2020-international-survey-of-adult-financial-literacy_145f5607-en.html" target="_blank">OECD/INFE 2020 International Survey of Adult Financial Literacy</a></li>
+        <li><a href="https://www.stockmarketgame.org/assets/pdf/2008%20JumpStart%20Financial%20Literacy%20Survey.pdf" target="_blank">The Financial Literacy of Young American Adults</a></li>
+      </ul>
+
+      <h2>Goal Setting to Achieve Success</h2>
+      <ul>
+        <li><a href="https://psycnet.apa.org/record/2002-15790-003" target="_blank">Theory of Goal Setting and Task Motivation</a></li>
+        <li><a href="https://www.researchgate.net/publication/6598646_The_nature_of_procrastination_a_meta-analytic_and_theoretical_review_of_quintessential_self-regulatory_failure_Psychol_Bull_133_65-94" target="_blank">The Nature Of Procrastination</a></li>
+        <li><a href="https://scirp.org/reference/referencespapers?referenceid=2982408" target="_blank">Promoting Health Behavior Change in Canada: A Quality Improvement Project Integrating Prevention and Wellness in Frontline Care</a></li>
+        <li><a href="https://books.google.com.ph/books/about/Rethinking_Positive_Thinking.html?id=2ZLaCwAAQBAJ&redir_esc=y" target="_blank">Rethinking Positive Thinking</a></li>
+      </ul>
+
+      <h2>Physical and Mental Health</h2>
+      <ul>
+        <li><a href="https://healthcare.utah.edu/healthfeed/2025/05/mental-health-just-important-your-physical-health#:~:text=Mental%20and%20physical%20health%20are,same%20is%20true%20in%20reverse" target="_blank">The Physical and Mental Health Connection</a></li>
+        <li><a href="https://www.studocu.com/ph/document/cotabato-state-university/environmental-management-system/lesson-3-english/39113579" target="_blank">Taking Charge Of One's Health</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0091743511000557?via%3Dihub" target="_blank">Association Between School-Based Physical Activity, Including Physical Education, And Academic Performance</a></li>
+      </ul>
+
+    <h2>Spiritual Self</h2>
+      <ul>
+        <li><a href="https://era.library.ualberta.ca/items/87912c01-ceab-4c0b-8a97-e3326ce11b56?fbclid=IwY2xjawLCSCtleHRuA2FlbQIxMABicmlkETE0RzdZRm56RUhkM3k0MHFLAR77l8EvBnF23OQyIXdCgD3rS6y0rKK-AyHrLCILlYYi9GdOfX4IMnZm1mfl2w_aem_FtqoYjw5l9uQmc_Q9zdnPw" target="_blank">An Exploration of How Spirituality Shapes Holistic Self‑Care</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BSIT - 2D | GNED 08 - Understanding The Self | All Rights Reserved.</p>
+  </footer>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  const body = document.body;
+
+  // Open or close nav menu
+  toggle.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = navList.classList.contains('show');
+
+    navList.classList.toggle('show');
+    navList.classList.remove('hide');
+
+    if (!isOpen) {
+      body.classList.add('no-scroll');
+    } else {
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    }
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('show');
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const isClickInsideMenu = navList.contains(event.target);
+    const isBurger = toggle.contains(event.target);
+    const isMenuVisible = navList.classList.contains('show');
+
+    if (!isClickInsideMenu && !isBurger && isMenuVisible) {
+      navList.classList.remove('show');
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

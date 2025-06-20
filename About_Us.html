@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Understanding The Self – About Us</title>
+  <link rel="stylesheet" href="Properties/About_Us.css" />
+</head>
+<body>
+<header>
+  <!-- Header Image with Overlay -->
+  <div class="header-image">
+    <img src="BSIT2D.jpg" alt="Group Header" />
+  </div>
+
+  <!-- Navigation Container -->
+  <div class="container">
+    <div class="header-left">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="Home.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Topic</a>
+          <ul class="dropdown-content">
+            <li><a href="Digital_Self.html">Digital Self</a></li>
+            <li><a href="Economic_Self.html">Economic Self</a></li>
+            <li><a href="Goal_Setting_To_Achieve_Success.html">Goal Setting to Achieve Success</a></li>
+            <li><a href="Physical_And_Mental_Health.html">Physical and Mental Health</a></li>
+            <li><a href="Spritual_Self.html">Spiritual Self</a></li>
+          </ul>
+        </li>
+        <li><a href="Resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <div class="topic-grid">
+
+    <section class="topic">
+      <h2>Digital Self</h2>
+      <ul>
+        <li>Bohol, Prince</li>
+        <li>Cantor, Jayzel</li>
+        <li>Gahoy, Maxzivien </li>
+        <li>Hipolito, Sam Margarette</li>
+        <li>Hitungo, Kimberly</li>
+        <li>Malvar, Diana Jean</li>
+        <li>Santos, Christian Mark</li>
+      </ul>
+    </section>
+
+    <section class="topic">
+      <h2>Economic Self</h2>
+      <ul>
+        <li>Bernalte, Sarah</li>
+        <li>Casan, Jan Mejer</li>
+        <li>Delfin, Charles</li>
+        <li>Llagas, Christofer Jr.</li>
+        <li>Odivilas, Angelo</li>
+        <li>Rodelas, Rafael</li>
+        <li>Torrico, Raniel</li>
+        <li>Vergara, Liezel</li>
+      </ul>
+    </section>
+
+    <section class="topic">
+      <h2>Goal Setting to Achieve Success</h2>
+      <ul>
+        <li>Apugan, John Paul</li>
+        <li>Galvez, John Paul</li>
+        <li>Jimenez, John Mathew</li>
+        <li>Lusanta, Janrey</li>
+        <li>Naagas, Jherymaine</li>
+        <li>Naquila, Mhelvin</li>
+        <li>Reyes, Kenan</li>
+      </ul>
+    </section>
+
+  </div>
+
+    <section class="topic">
+      <h2>Physical and Mental Health</h2>
+      <ul>
+        <li>Arellano, Blessy</li>
+        <li>Ausente, Juliana</li>
+        <li>Icaro, Jamaica</li>
+        <li>Miranda, Earl</li>
+        <li>Param, Gerome</li>
+        <li>Sablan, Charity</li>
+        <li>Sinad, Zoe</li>
+        <li>Villanueva, Eunice</li>
+      </ul>
+    </section>
+
+    <section class="topic">
+      <h2>Spiritual Self</h2>
+      <ul>
+        <li>Ajero, Francis Gail</li>
+        <li>Cabuay, Romeo</li>
+        <li>Camat, Charles Josiah</li>
+        <li>Capistrano, Lance</li>
+        <li>Jubilag, Jhon Carl</li>
+        <li>Pakingan, Kenneth</li>
+        <li>Salando, Sean Dave</li>
+      </ul>
+    </section>
+</main>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navList = document.querySelector('.nav-list');
+  const body = document.body;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navList.classList.toggle('show');
+    navList.classList.remove('hide');
+    body.classList.toggle('no-scroll');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navList.contains(e.target) && !toggle.contains(e.target)) {
+      navList.classList.remove('show');
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    }
+  });
+
+  document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('show');
+      navList.classList.add('hide');
+      body.classList.remove('no-scroll');
+    });
+  });
+</script>
+
+
+  <footer>
+    <p>&copy; 2025 BSIT - 2D | GNED 08 - Understanding The Self | All Rights Reserved.</p>
+  </footer>
+  
+</body>
+</html>

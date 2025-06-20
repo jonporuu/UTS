@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Understanding The Self – Tech-Life Balance</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="header-left">
+      <img src="CvSU - Imus.png" alt="Logo" class="logo-img" />
+    </div>
+    <h1 class="header-title">Understanding The Self</h1>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <div class="page-title">
+    <h2>Topic 4: Tech-Life Balance</h2>
+  </div>
+
+  <section class="topic">
+    <h3>What it is</h3>
+    <p>The ability to manage technology use in a way that promotes well-being and real-world productivity.</p>
+  </section>
+
+  <section class="topic">
+    <h3>Challenges</h3>
+    <p>Overuse of devices, screen fatigue, decreased focus, disrupted sleep, and reduced face-to-face interaction.</p>
+  </section>
+
+  <section class="topic">
+    <h3>Why it matters</h3>
+    <p>A balanced approach improves mental clarity, relationships, and academic or work performance.</p>
+  </section>
+
+  <section class="topic">
+    <h3>Tips & Strategies</h3>
+    <ul>
+      <li>Set screen time limits for apps and devices.</li>
+      <li>Create phone-free zones (e.g., bedroom, dining area).</li>
+      <li>Practice digital detox days—go offline for a few hours or a whole day weekly.</li>
+      <li>Use apps that monitor and manage your digital habits.</li>
+      <li>Prioritize in-person connections and outdoor activities.</li>
+      <li>Schedule regular breaks during long digital tasks (20-20-20 rule).</li>
+    </ul>
+  </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Understanding The Self | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const body = document.body;
+
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = navList.classList.contains('show');
+      navList.classList.toggle('show');
+      navList.classList.remove('hide');
+      body.classList.toggle('no-scroll', !isOpen);
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      const isClickInsideMenu = navList.contains(event.target);
+      const isBurger = toggle.contains(event.target);
+      const isMenuVisible = navList.classList.contains('show');
+
+      if (!isClickInsideMenu && !isBurger && isMenuVisible) {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>

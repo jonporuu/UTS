@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding The Self – Digital Etiquette</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="header-left">
+      <img src="CvSU - Imus.png" alt="Logo" class="logo-img" />
+    </div>
+    <h1 class="header-title">Understanding The Self</h1>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <div class="page-title">
+    <h2>Topic 3: Digital Etiquette</h2>
+  </div>
+
+  <section class="topic">
+    <h3>What it is</h3>
+    <p>Digital Etiquette, or netiquette, refers to the appropriate and respectful way of communicating and behaving in the digital world.</p>
+  </section>
+
+  <section class="topic">
+    <h3>Importance</h3>
+    <p>Practicing good digital manners ensures positive interactions and helps build a respectful online community.</p>
+  </section>
+
+  <section class="topic">
+    <h3>Challenges</h3>
+    <ul>
+      <li>Misunderstandings caused by lack of tone or context</li>
+      <li>Online arguments and trolling</li>
+      <li>Unintended offense due to cultural differences</li>
+    </ul>
+  </section>
+
+  <section class="topic">
+    <h3>Tips & Strategies</h3>
+    <ul>
+      <li>Always think before posting or commenting</li>
+      <li>Use respectful and inclusive language</li>
+      <li>Observe community rules and guidelines</li>
+      <li>Don't engage in online arguments</li>
+      <li>Respect others' opinions even if you disagree</li>
+    </ul>
+    <p>Practicing digital etiquette not only reflects your character but also promotes a healthier online space for all.</p>
+  </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Understanding The Self | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const body = document.body;
+
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = navList.classList.contains('show');
+      navList.classList.toggle('show');
+      navList.classList.remove('hide');
+      body.classList.toggle('no-scroll', !isOpen);
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!navList.contains(event.target) && !toggle.contains(event.target) && navList.classList.contains('show')) {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>

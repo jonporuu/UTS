@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding The Self - Digital Identity</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+  <div class="container">
+    <div class="header-left">
+      <img src="CvSU - Imus.png" alt="Logo" class="logo-img" />
+    </div>
+    <h1 class="header-title">Digital Identity</h1>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="topic">
+    <h3>What it is</h3>
+    <p>Your digital identity is your online persona, shaped by the content you post, your social media profiles, online interactions, and the data you leave behind.</p>
+    
+    <h3>Why it matters</h3>
+    <p>It influences how others perceive you professionally and personally, often forming first impressions before in-person interactions.</p>
+  </section>
+
+  <section class="topic">
+    <h3>Challenges</h3>
+    <ul>
+      <li>Identity confusion or misrepresentation</li>
+      <li>Comparison with others online</li>
+      <li>Cyberbullying and online harassment</li>
+    </ul>
+  </section>
+
+  <section class="topic">
+    <h3>Tips & Strategies</h3>
+    <ul>
+      <li>Be authentic and intentional in what you share</li>
+      <li>Review and adjust privacy settings regularly</li>
+      <li>Pause and reflect before posting content</li>
+      <li>Use platforms that align with your values</li>
+      <li>Keep a consistent and professional presence if used for academic/career purposes</li>
+    </ul>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; 2025 Understanding The Self | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    const body = document.body;
+
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = navList.classList.contains('show');
+
+      navList.classList.toggle('show');
+      navList.classList.remove('hide');
+
+      if (!isOpen) {
+        body.classList.add('no-scroll');
+      } else {
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      }
+    });
+
+    document.querySelectorAll('.nav-list a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      const isClickInsideMenu = navList.contains(event.target);
+      const isBurger = toggle.contains(event.target);
+      const isMenuVisible = navList.classList.contains('show');
+
+      if (!isClickInsideMenu && !isBurger && isMenuVisible) {
+        navList.classList.remove('show');
+        navList.classList.add('hide');
+        body.classList.remove('no-scroll');
+      }
+    });
+  </script>
+</body>
+</html>
